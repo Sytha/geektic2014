@@ -6,24 +6,28 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/geektic.css">
     </head>
-    <body class="bg-warning" ng-controller="HelloCtrl">
-    <div id="page">
+    <body class="bg-warning">
+    <div id="page" ng-app="app">
     	<h1 class=" title text-center bg-danger">GEEKTIC</h1>
     	<h6 class="title text-center bg-danger">L'amour 2.0</h6>
     	<div id="listDiv" class="col-md-4 bg-warning">
         	<form id="searchLove" class="text-center">
-        		<label><input type="radio" name="sexe" value="Homme" selected/>Homme</label>
-        		<label><input type="radio" name="sexe" value="Femme"/>Femme</label>
+        	Je cherche : 
+       		<label><input type="radio" name="sexe" value="Homme" checked/>Un geek</label>
+       		<label><input type="radio" name="sexe" value="Femme"/>Une geekette</label><br/>
+        	
+        	
+        	<div ng-controller="MainCtrl">
+	        	Centres D'intérets :  <br/>
+	        	
+					<label ng-repeat="interet in interets" class="checkbox" for="{{interet.id}}">
+						<input type="checkbox" id="{{interet.id}}" ng-model="selected[interet.id]"/>
+						{{interet.libelle}}
+					</label>
+					<input type="button" data-ng-click="ShowSelected()" value="Chercher l'amour!"/>
+        	</div>
         		
-        		<br/>
         		
-        		<select>
-        		
-        		</select>
-        		
-        		<br/>
-        		
-        		<input type="button" value="Chercher l'amour!"/>
         	</form>
 		</div>
 		<div id="resultDiv" class="col-md-8 bg-warning">

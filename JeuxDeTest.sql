@@ -9,11 +9,11 @@ INSERT INTO INTERETS VALUES (8,'WEB');
 INSERT INTO INTERETS VALUES (9,'COBOL');
 INSERT INTO INTERETS VALUES (10,'ASSEMBLEUR');
 
-INSERT INTO GEEKS VALUES (1,'Jean', 'Bloux', 'H', 21, 'Lyon', 5 ,'jb@yopmail.fr','http://humourger.com/femmesmoches/Femme_a_barbe_moche.jpg');
-INSERT INTO GEEKS VALUES (2,'Jeanne', 'Elléou', 'F', 19, 'Paris', 2, 'je@yopmail.fr','http://www.partfaliaz.com/wp-content/uploads/2011/02/jaimie-warren-2.jpg');
-INSERT INTO GEEKS VALUES (3,'Marc', 'Iccy', 'H', 23, 'Roubaix', 5, 'mi@yopmail.fr','http://us.cdn3.123rf.com/168nwm/alexis84/alexis841404/alexis84140400922/27774501-portrait-de-drole-d-39-expression-brandissant-pouces-sur-fond-jaune.jpg');
-INSERT INTO GEEKS VALUES (4,'Pierre', 'Duroux', 'H', 22, 'Lyon', 6, 'pd@yopmail.fr','http://static1.purepeople.com/articles/1/33/86/1/@/234360-cyril-hanouna-620x0-2.jpg');
-INSERT INTO GEEKS VALUES (5,'Marc', 'Hamil', 'H', 60, 'Loin-loin-ya-longtemps', 10 ,'mh@yopmail.fr','http://static.tvtropes.org/pmwiki/pub/images/mark_hamill.jpg');
+INSERT INTO GEEKS VALUES (1,'Jean', 'Bloux', 'H', 21, 'Lyon' ,'jb@yopmail.fr','http://humourger.com/femmesmoches/Femme_a_barbe_moche.jpg');
+INSERT INTO GEEKS VALUES (2,'Jeanne', 'Elléou', 'F', 19, 'Paris', 'je@yopmail.fr','http://www.partfaliaz.com/wp-content/uploads/2011/02/jaimie-warren-2.jpg');
+INSERT INTO GEEKS VALUES (3,'Marc', 'Iccy', 'H', 23, 'Roubaix', 'mi@yopmail.fr','http://us.cdn3.123rf.com/168nwm/alexis84/alexis841404/alexis84140400922/27774501-portrait-de-drole-d-39-expression-brandissant-pouces-sur-fond-jaune.jpg');
+INSERT INTO GEEKS VALUES (4,'Pierre', 'Duroux', 'H', 22, 'Lyon', 'pd@yopmail.fr','http://static1.purepeople.com/articles/1/33/86/1/@/234360-cyril-hanouna-620x0-2.jpg');
+INSERT INTO GEEKS VALUES (5,'Marc', 'Hamil', 'H', 60, 'Loin-loin-ya-longtemps' ,'mh@yopmail.fr','http://static.tvtropes.org/pmwiki/pub/images/mark_hamill.jpg');
 
 INSERT INTO HISTORY VALUES (1,'2014-07-03 13:12:23',1);
 INSERT INTO HISTORY VALUES (2,'2014-07-03 13:12:23',1);
@@ -31,3 +31,17 @@ INSERT INTO HISTORY VALUES (13,'2014-07-03 13:12:23',2);
 INSERT INTO HISTORY VALUES (14,'2014-07-03 13:12:23',2);
 INSERT INTO HISTORY VALUES (15,'2014-07-03 13:12:23',1);
 INSERT INTO HISTORY VALUES (16,'2014-07-03 13:12:23',2);
+
+INSERT INTO GEEKS_INTERETS VALUES (1,1);
+INSERT INTO GEEKS_INTERETS VALUES (1,3);
+INSERT INTO GEEKS_INTERETS VALUES (1,4);
+INSERT INTO GEEKS_INTERETS VALUES (1,10);
+INSERT INTO GEEKS_INTERETS VALUES (2,1);
+INSERT INTO GEEKS_INTERETS VALUES (2,5);
+INSERT INTO GEEKS_INTERETS VALUES (3,1);
+INSERT INTO GEEKS_INTERETS VALUES (3,2);
+INSERT INTO GEEKS_INTERETS VALUES (3,3);
+INSERT INTO GEEKS_INTERETS VALUES (4,1);
+INSERT INTO GEEKS_INTERETS VALUES (5,6);
+INSERT INTO GEEKS_INTERETS VALUES (5,3);
+INSERT INTO GEEKS_INTERETS VALUES (5,7);

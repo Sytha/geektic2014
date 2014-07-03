@@ -4,6 +4,8 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+
+
 @Entity
 @Table(name="GEEKS")
 public class Geek {
@@ -26,9 +28,8 @@ public class Geek {
 	private String mail;
 	@Column
 	private String gravatar;
-	@ManyToOne
-	@JoinColumn(name = "interet")
-    private Interet interet;
+	@ManyToMany(mappedBy = "geeks")
+	private Set<Interet> interets;
 
 	public Long getId() {
 		return id;
@@ -94,11 +95,12 @@ public class Geek {
 		this.gravatar = gravatar;
 	}
 
-	public Interet getInteret() {
-		return interet;
+	public Set<Interet> getInterets() {
+		return interets;
 	}
 
-	public void setInteret(Interet interet) {
-		this.interet = interet;
+	public void setInterets(Set<Interet> interets) {
+		this.interets = interets;
 	}
+
 }

@@ -1,5 +1,7 @@
 package com.ninja_squad.geektic;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,7 +15,13 @@ public class Interet {
 	@Column
 	private String libelle;
 
-
+	@ManyToMany
+	@JoinTable(name = "GEEKS_INTERETS",
+	           joinColumns = @JoinColumn(name = "interet_id"),
+	           inverseJoinColumns = @JoinColumn(name = "geek_id"))
+	private Set<Geek> geeks ;
+	
+	
 	public Long getId() {
 		return id;
 	}

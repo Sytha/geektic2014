@@ -29,7 +29,7 @@ public class GeekDao {
 	public List<Geek> findByCriteria(String sexe, String interet){
 		String jpql = "SELECT g "
 				+ "FROM Geek g "
-				+ "JOIN g.interet i "
+				+ "JOIN g.interets i "
 				+ "WHERE g.sexe = :sexe "
 				+ "AND i.libelle = :interet ";
 		TypedQuery<Geek> query = em.createQuery(jpql, Geek.class); 

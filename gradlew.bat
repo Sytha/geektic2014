@@ -1,4 +1,4 @@
-@set GRADLE_USER_HOME=G:\Cours\J2EE\gradle_home
+@set GRADLE_USER_HOME=D:\Cours\J2EE\gradle_home
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem

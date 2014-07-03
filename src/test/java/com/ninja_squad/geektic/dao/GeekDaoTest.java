@@ -64,7 +64,23 @@ public class GeekDaoTest extends BaseDaoTest {
 				.values(14,"2014-07-03 13:12:23",2)
 				.values(15,"2014-07-03 13:12:23",1)
 				.values(16,"2014-07-03 13:12:23",2)
-				.build()); // TODO define your operations here.
+				.build(),
+	Operations.insertInto("geeks_interets")
+    			.columns("geek_id","interet_id")
+    			.values (1,1)
+    			.values (1,3)
+    			.values (1,4)
+    			.values (1,10)
+    			.values (2,1)
+    			.values (2,5)
+    			.values (3,1)
+    			.values (3,2)
+    			.values (3,3)
+    			.values (4,1)
+    			.values (5,6)
+    			.values (5,3)
+    			.values (5,7)
+    			.build()); // TODO define your operations here.
         DbSetup dbSetup = new DbSetup(destination, operation);
         dbSetup.launch();
     }
@@ -92,9 +108,6 @@ public class GeekDaoTest extends BaseDaoTest {
 		//On test si un geek a un ville
 		resultString = list.get(0).getVille();
 		assertEquals("Lyon",resultString);
-		//On test si un geek a un interet
-		resultLong = list.get(0).getInteret().getId();
-		assertEquals(5L, resultLong);
 		//On test si un geek a un mail
 		resultString = list.get(0).getMail();
 		assertEquals("jb@yopmail.fr",resultString);
@@ -124,9 +137,6 @@ public class GeekDaoTest extends BaseDaoTest {
 		//On test si un geek a un ville
 		resultString = g.getVille();
 		assertEquals("Lyon",resultString);
-		//On test si un geek a un interet
-		resultLong = g.getInteret().getId();
-		assertEquals(5L, resultLong);
 		//On test si un geek a un mail
 		resultString = g.getMail();
 		assertEquals("jb@yopmail.fr",resultString);
