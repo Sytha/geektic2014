@@ -24,7 +24,7 @@ FOREIGN KEY (interet) REFERENCES INTERETS(id)
 
 CREATE TABLE HISTORY (
 id integer NOT NULL,
-date DATE NOT NULL,
+date timestamp NOT NULL,
 geek integer NOT NULL,
 primary KEY (id),
 FOREIGN KEY (geek) REFERENCES GEEKS(id)
