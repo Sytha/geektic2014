@@ -4,7 +4,6 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-
 @Entity
 @Table(name="GEEKS")
 public class Geek {
@@ -27,8 +26,9 @@ public class Geek {
 	private String mail;
 	@Column
 	private String gravatar;
-	@OneToOne @MapsId
-    Interet interet;
+	@ManyToOne
+	@JoinColumn(name = "interet")
+    private Interet interet;
 	@OneToMany(mappedBy = "geek")
 	private Set<History> history ;
 
@@ -103,8 +103,4 @@ public class Geek {
 	public void setInteret(Interet interet) {
 		this.interet = interet;
 	}
-
-	
-
-
 }
