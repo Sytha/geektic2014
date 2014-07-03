@@ -1,0 +1,33 @@
+INSERT INTO INTERETS VALUES (1,'J2EE');
+INSERT INTO INTERETS VALUES (2,'C#');
+INSERT INTO INTERETS VALUES (3,'C');
+INSERT INTO INTERETS VALUES (4,'C++');
+INSERT INTO INTERETS VALUES (5,'JAVA');
+INSERT INTO INTERETS VALUES (6,'.NET');
+INSERT INTO INTERETS VALUES (7,'PL/SQL');
+INSERT INTO INTERETS VALUES (8,'WEB');
+INSERT INTO INTERETS VALUES (9,'COBOL');
+INSERT INTO INTERETS VALUES (10,'ASSEMBLEUR');
+
+INSERT INTO GEEKS VALUES (1,'Jean', 'Bloux', 'H', 21, 'Lyon', 5 ,'jb@yopmail.fr','http://humourger.com/femmesmoches/Femme_a_barbe_moche.jpg');
+INSERT INTO GEEKS VALUES (2,'Jeanne', 'Elléou', 'F', 19, 'Paris', 2 'je@yopmail.fr',,'http://www.partfaliaz.com/wp-content/uploads/2011/02/jaimie-warren-2.jpg');
+INSERT INTO GEEKS VALUES (3,'Marc', 'Iccy', 'H', 23, 'Roubaix', 5 'mi@yopmail.fr',,'http://us.cdn3.123rf.com/168nwm/alexis84/alexis841404/alexis84140400922/27774501-portrait-de-drole-d-39-expression-brandissant-pouces-sur-fond-jaune.jpg');
+INSERT INTO GEEKS VALUES (4,'Pierre', 'Duroux', 'H', 22, 'Lyon', 6 'pd@yopmail.fr',,'http://static1.purepeople.com/articles/1/33/86/1/@/234360-cyril-hanouna-620x0-2.jpg');
+INSERT INTO GEEKS VALUES (5,'Marc', 'Hamil', 'H', 60, 'Loin-loin-ya-longtemps', 10 ,'mh@yopmail.fr','http://static.tvtropes.org/pmwiki/pub/images/mark_hamill.jpg');
+
+INSERT INTO HISTORY VALUES (1,'03/07/2014',1);
+INSERT INTO HISTORY VALUES (2,'03/07/2014',1);
+INSERT INTO HISTORY VALUES (3,'03/07/2014',3);
+INSERT INTO HISTORY VALUES (4,'03/07/2014',4);
+INSERT INTO HISTORY VALUES (5,'03/07/2014',5);
+INSERT INTO HISTORY VALUES (6,'03/07/2014',4);
+INSERT INTO HISTORY VALUES (7,'03/07/2014',3);
+INSERT INTO HISTORY VALUES (8,'03/07/2014',1);
+INSERT INTO HISTORY VALUES (9,'03/07/2014',2);
+INSERT INTO HISTORY VALUES (10,'03/07/2014',2);
+INSERT INTO HISTORY VALUES (11,'03/07/2014',5);
+INSERT INTO HISTORY VALUES (12,'03/07/2014',1);
+INSERT INTO HISTORY VALUES (13,'03/07/2014',2);
+INSERT INTO HISTORY VALUES (14,'03/07/2014',2);
+INSERT INTO HISTORY VALUES (15,'03/07/2014',1);
+INSERT INTO HISTORY VALUES (16,'03/07/2014',2);
