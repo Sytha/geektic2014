@@ -5,10 +5,13 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import org.springframework.stereotype.Repository;
+
 import com.ninja_squad.geektic.*;
 
-
+@Repository
 public class GeekDao {
+	@PersistenceContext
 	private EntityManager em;
 	public GeekDao(EntityManager em){
 		this.em=em;
