@@ -13,12 +13,10 @@ import com.ninja_squad.geektic.*;
 public class GeekDao {
 	@PersistenceContext
 	private EntityManager em;
-	public GeekDao(EntityManager em){
-		this.em=em;
-	}
+
 	
 	public List<Geek> findAll(){
-		String jpql = "SELECT g"
+		String jpql = "SELECT g "
 				+ "FROM Geek g";
 		TypedQuery<Geek> query = em.createQuery(jpql, Geek.class); 
 		return query.getResultList();

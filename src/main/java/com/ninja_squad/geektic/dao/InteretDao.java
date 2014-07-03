@@ -9,18 +9,16 @@ import com.ninja_squad.geektic.*;
 public class InteretDao {
 	@PersistenceContext
 	private EntityManager em;
-	public InteretDao(EntityManager em){
-		this.em=em;
-	}
+
 	
 	public List<Interet> findAll(){
-		String jpql = "SELECT i"
+		String jpql = "SELECT i "
 				+ "FROM Interet i";
 		TypedQuery<Interet> query = em.createQuery(jpql, Interet.class); 
 		return query.getResultList();
 	}
 	
-	public void persist(Geek history){
-		em.persist(history);
+	public void persist(Interet interet){
+		em.persist(interet);
 	}
 }

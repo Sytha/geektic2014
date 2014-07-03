@@ -29,8 +29,6 @@ public class Geek {
 	@ManyToOne
 	@JoinColumn(name = "interet")
     private Interet interet;
-	@OneToMany(mappedBy = "geek")
-	private Set<History> history ;
 
 	public Long getId() {
 		return id;

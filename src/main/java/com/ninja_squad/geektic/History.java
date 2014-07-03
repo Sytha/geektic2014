@@ -17,6 +17,34 @@ public class History {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date;
 	
-	@OneToOne @MapsId
+	@ManyToOne
+	@JoinColumn(name = "geek")
 	private Geek geek;
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public Geek getGeek() {
+		return geek;
+	}
+
+	public void setGeek(Geek geek) {
+		this.geek = geek;
+	}
+	
+	
 }

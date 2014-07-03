@@ -11,9 +11,7 @@ import com.ninja_squad.geektic.*;
 public class HistoryDao {
 	@PersistenceContext
 	private EntityManager em;
-	public HistoryDao(EntityManager em){
-		this.em=em;
-	}
+
 	
 	public List<History> findAllGeekHistoryById(Long id){
 		String jpql = "SELECT h "
@@ -30,7 +28,7 @@ public class HistoryDao {
 		return list.size();
 	}
 	
-	public void persist(Geek history){
+	public void persist(History history){
 		em.persist(history);
 	}
 }

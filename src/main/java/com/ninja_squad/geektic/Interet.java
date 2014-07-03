@@ -11,7 +11,8 @@ public class Interet {
 	private Long id;
 	
 	@Column
-	private String interet;
+	private String libelle;
+
 
 	public Long getId() {
 		return id;
@@ -21,11 +22,13 @@ public class Interet {
 		this.id = id;
 	}
 
-	public String getInteret() {
-		return interet;
+	public String getLibelle() {
+		return libelle;
 	}
 
-	public void setInteret(String interet) {
-		this.interet = interet;
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
 	}
+
+	
 }
