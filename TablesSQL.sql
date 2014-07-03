@@ -8,6 +8,7 @@ CREATE TABLE GEEKS (
 id integer NOT NULL,
 nom VARCHAR(255),
 prenom VARCHAR(255),
+sexe VARCHAR(1),
 ville VARCHAR(255),
 interet integer,
 mail VARCHAR(255),
