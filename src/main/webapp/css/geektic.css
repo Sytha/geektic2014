@@ -1,0 +1,38 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+h6{
+  border-bottom: ridge red 3px;
+}
+
+#page{
+	width: 70%;
+	margin: auto;
+	margin-top:10%;
+	border: ridge red 3px;
+	min-height : 562px;
+}
+
+#searchLove{
+	margin : auto;
+	margin-top : 10%;
+	width: 70%;
+	border: ridge pink 2px;
+}
+
+.title{
+	padding : 0;
+	margin  : 0;
+}
+
+#listDiv{
+	padding:0px;
+	border-right: ridge red 3px;
+	min-height:500px;
+}
+
+#resultDiv{
+	min-height:500px;
+}

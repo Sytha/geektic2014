@@ -3,10 +3,33 @@
 <html ng-app="geektic">
     <head>
         <title>Geektic</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/geektic.css">
     </head>
-    <body ng-controller="HelloCtrl">
-        <h1>{{ helloMessage.message }}</h1>
-
+    <body class="bg-warning" ng-controller="HelloCtrl">
+    <div id="page">
+    	<h1 class=" title text-center bg-danger">GEEKTIC</h1>
+    	<h6 class="title text-center bg-danger">L'amour 2.0</h6>
+    	<div id="listDiv" class="col-md-4 bg-warning">
+        	<form id="searchLove" class="text-center">
+        		<label><input type="radio" name="sexe" value="Homme" selected/>Homme</label>
+        		<label><input type="radio" name="sexe" value="Femme"/>Femme</label>
+        		
+        		<br/>
+        		
+        		<select>
+        		
+        		</select>
+        		
+        		<br/>
+        		
+        		<input type="button" value="Chercher l'amour!"/>
+        	</form>
+		</div>
+		<div id="resultDiv" class="col-md-8 bg-warning">
+        	<h1></h1>
+		</div>
+	</div>
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>
         <script src="/js/app.js"></script>
