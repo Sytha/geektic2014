@@ -7,6 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import com.ninja_squad.dbsetup.DbSetup;
 import com.ninja_squad.dbsetup.Operations;
 import com.ninja_squad.dbsetup.operation.Operation;
@@ -103,6 +105,7 @@ public class HistoryDaoTest extends BaseDaoTest {
     }
 
     @Test
+    @Transactional
     public void testPersistHistory(){
     	Date date = new Date();
     	Geek g = daoGeek.findById(1L);
