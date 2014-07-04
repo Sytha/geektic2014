@@ -183,3 +183,115 @@ line 1:8: unexpected token: iFROM
 20:51:34,550 DEBUG main hibernate.SQL:109 - select interet0_.id as id1_2_0_, interet0_.libelle as libelle2_2_0_ from INTERETS interet0_ where interet0_.id=?
 20:51:34,550 DEBUG main hibernate.SQL:109 - select interet0_.id as id1_2_0_, interet0_.libelle as libelle2_2_0_ from INTERETS interet0_ where interet0_.id=?
 20:51:34,690 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.interet as interet9_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_, interet1_.id as id1_2_1_, interet1_.libelle as libelle2_2_1_ from GEEKS geek0_ left outer join INTERETS interet1_ on geek0_.interet=interet1_.id where geek0_.id=?
+08:49:32,449 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+08:51:11,804 DEBUG main hibernate.SQL:109 - select history0_.id as id1_2_, history0_.date as date2_2_, history0_.geek as geek3_2_ from HISTORY history0_ inner join GEEKS geek1_ on history0_.geek=geek1_.id where geek1_.id=?
+08:51:11,925 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:51:12,065 DEBUG main hibernate.SQL:109 - select history0_.id as id1_2_, history0_.date as date2_2_, history0_.geek as geek3_2_ from HISTORY history0_ inner join GEEKS geek1_ on history0_.geek=geek1_.id where geek1_.id=?
+08:51:12,165 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:51:12,395 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:51:12,395 DEBUG main hibernate.SQL:109 - call next value for history_seq
+08:51:12,415 DEBUG main hibernate.SQL:109 - insert into HISTORY (date, geek, id) values (?, ?, ?)
+08:51:12,425 DEBUG main hibernate.SQL:109 - select history0_.id as id1_2_, history0_.date as date2_2_, history0_.geek as geek3_2_ from HISTORY history0_ inner join GEEKS geek1_ on history0_.geek=geek1_.id where geek1_.id=?
+08:53:18,548 DEBUG main hibernate.SQL:109 - select interet0_.id as id1_3_, interet0_.libelle as libelle2_3_ from INTERETS interet0_
+08:53:28,941 DEBUG main hibernate.SQL:109 - select history0_.id as id1_2_, history0_.date as date2_2_, history0_.geek as geek3_2_ from HISTORY history0_ inner join GEEKS geek1_ on history0_.geek=geek1_.id where geek1_.id=?
+08:53:29,062 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:53:29,202 DEBUG main hibernate.SQL:109 - select history0_.id as id1_2_, history0_.date as date2_2_, history0_.geek as geek3_2_ from HISTORY history0_ inner join GEEKS geek1_ on history0_.geek=geek1_.id where geek1_.id=?
+08:53:29,302 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:53:29,522 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:53:29,532 DEBUG main hibernate.SQL:109 - call next value for history_seq
+08:53:29,552 DEBUG main hibernate.SQL:109 - insert into HISTORY (date, geek, id) values (?, ?, ?)
+08:53:29,552 DEBUG main hibernate.SQL:109 - select history0_.id as id1_2_, history0_.date as date2_2_, history0_.geek as geek3_2_ from HISTORY history0_ inner join GEEKS geek1_ on history0_.geek=geek1_.id where geek1_.id=?
+08:53:39,783 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+08:53:40,014 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_
+08:53:40,244 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:55:42,355 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+08:55:42,606 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_
+08:55:42,826 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:56:03,647 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+08:56:03,898 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_
+08:56:04,118 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:58:13,797 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where interet2_.libelle=?
+08:58:31,589 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_
+08:58:31,840 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+08:58:32,070 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+08:58:32,290 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where interet2_.libelle=?
+09:29:39,361 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_
+09:29:39,622 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+09:29:39,852 DEBUG main hibernate.SQL:109 - select distinct geek0_.id as id1_0_0_, interet2_.id as id1_3_1_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_, interet2_.libelle as libelle2_3_1_, interets1_.geek_id as geek_id2_0_0__, interets1_.interet_id as interet_1_1_0__ from GEEKS geek0_ left outer join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id left outer join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+09:29:40,072 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where interet2_.libelle=?
+09:30:54,172 DEBUG main hibernate.SQL:109 - select distinct geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_
+09:34:53,881 ERROR main ast.ErrorCounter:78 -  Invalid path: 'g.interets'
+09:34:53,891 ERROR main ast.ErrorCounter:73 -  Invalid path: 'g.interets'
+ Invalid path: 'g.interets'
+	at org.hibernate.hql.internal.ast.util.LiteralProcessor.lookupConstant(LiteralProcessor.java:129)
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:225)
+	at org.hibernate.hql.internal.ast.tree.FromReferenceNode.resolve(FromReferenceNode.java:126)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.createFromJoinElement(HqlSqlWalker.java:386)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.joinElement(HqlSqlBaseWalker.java:3858)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElement(HqlSqlBaseWalker.java:3644)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElementList(HqlSqlBaseWalker.java:3522)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromClause(HqlSqlBaseWalker.java:706)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:562)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:299)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:247)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:278)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:206)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:158)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:126)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:88)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:190)
+	at org.hibernate.internal.AbstractSessionImpl.getHQLQueryPlan(AbstractSessionImpl.java:301)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:236)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:1800)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createQuery(AbstractEntityManagerImpl.java:342)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:342)
+	at com.sun.proxy.$Proxy37.createQuery(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:262)
+	at com.sun.proxy.$Proxy35.createQuery(Unknown Source)
+	at com.ninja_squad.geektic.dao.GeekDao.findAll(GeekDao.java:22)
+	at com.ninja_squad.geektic.dao.GeekDaoTest.testFindAll(GeekDaoTest.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+09:34:54,021 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+09:34:54,292 DEBUG main hibernate.SQL:109 - select distinct geek0_.id as id1_0_0_, interet2_.id as id1_3_1_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_, interet2_.libelle as libelle2_3_1_, interets1_.geek_id as geek_id2_0_0__, interets1_.interet_id as interet_1_1_0__ from GEEKS geek0_ left outer join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id left outer join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+09:34:54,522 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where interet2_.libelle=?
+09:35:38,233 DEBUG main hibernate.SQL:109 - select distinct geek0_.id as id1_0_0_, interet2_.id as id1_3_1_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_, interet2_.libelle as libelle2_3_1_, interets1_.geek_id as geek_id2_0_0__, interets1_.interet_id as interet_1_1_0__ from GEEKS geek0_ left outer join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id left outer join INTERETS interet2_ on interets1_.interet_id=interet2_.id
+09:35:38,474 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_ from GEEKS geek0_ where geek0_.id=?
+09:35:38,714 DEBUG main hibernate.SQL:109 - select distinct geek0_.id as id1_0_0_, interet2_.id as id1_3_1_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_, interet2_.libelle as libelle2_3_1_, interets1_.geek_id as geek_id2_0_0__, interets1_.interet_id as interet_1_1_0__ from GEEKS geek0_ left outer join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id left outer join INTERETS interet2_ on interets1_.interet_id=interet2_.id where geek0_.sexe=? and interet2_.libelle=?
+09:35:38,934 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.age as age2_0_, geek0_.gravatar as gravatar3_0_, geek0_.mail as mail4_0_, geek0_.nom as nom5_0_, geek0_.prenom as prenom6_0_, geek0_.sexe as sexe7_0_, geek0_.ville as ville8_0_ from GEEKS geek0_ inner join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id inner join INTERETS interet2_ on interets1_.interet_id=interet2_.id where interet2_.libelle=?
+09:36:07,584 DEBUG main hibernate.SQL:109 - select distinct geek0_.id as id1_0_0_, interet2_.id as id1_3_1_, geek0_.age as age2_0_0_, geek0_.gravatar as gravatar3_0_0_, geek0_.mail as mail4_0_0_, geek0_.nom as nom5_0_0_, geek0_.prenom as prenom6_0_0_, geek0_.sexe as sexe7_0_0_, geek0_.ville as ville8_0_0_, interet2_.libelle as libelle2_3_1_, interets1_.geek_id as geek_id2_0_0__, interets1_.interet_id as interet_1_1_0__ from GEEKS geek0_ left outer join GEEKS_INTERETS interets1_ on geek0_.id=interets1_.geek_id left outer join INTERETS interet2_ on interets1_.interet_id=interet2_.id
