@@ -18,8 +18,12 @@ h6{
 #searchLove{
 	margin : auto;
 	margin-top : 10%;
-	width: 70%;
+	width: 90%;
 	border: ridge pink 2px;
+}
+
+#buttonSearch{
+	margin : auto;
 }
 
 .title{
@@ -35,4 +39,13 @@ h6{
 
 #resultDiv{
 	min-height:500px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+#mainTitle{
+	padding:110px;
+}
 }

@@ -3,10 +3,15 @@ package com.ninja_squad.geektic.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ninja_squad.geektic.dao.GeekDao;
 import com.ninja_squad.geektic.dao.InteretDao;
+import com.ninja_squad.geektic.Geek;
 import com.ninja_squad.geektic.Interet;
 
 import javax.transaction.Transactional;
@@ -25,8 +30,25 @@ public class GeekticService {
 	@Autowired
 	private InteretDao daoInteret;
 	
+	@Autowired
+	private GeekDao daoGeek;
+	
 	@RequestMapping(value="/interetsList")
-    public List<Interet> sayHello() {
+    public List<Interet> getListInterets() {
         return daoInteret.findAll();
+    }
+	
+	@RequestMapping(value="/search",params = {"sexe", "interet"})
+    public @ResponseBody List<Geek> getResultsList(@RequestParam(value="sexe") String sexe,@RequestParam(value="interet") String interet){
+		if(sexe.equals("A")){
+			return daoGeek.findByInteret(interet);
+		}else{
+			return daoGeek.findBySexeInteret(sexe, interet);
+		}
+    }
+	
+	@RequestMapping(value="/geek/{id}")
+    public Geek getGeekProfile(@PathVariable Long id){
+		return daoGeek.findById(id);
     }
 }

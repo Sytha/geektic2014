@@ -10,28 +10,30 @@
     <div id="page" ng-app="app">
     	<h1 class=" title text-center bg-danger">GEEKTIC</h1>
     	<h6 class="title text-center bg-danger">L'amour 2.0</h6>
-    	<div id="listDiv" class="col-md-4 bg-warning">
-        	<form id="searchLove" class="text-center">
-        	Je cherche : 
-       		<label><input type="radio" name="sexe" value="Homme" checked/>Un geek</label>
-       		<label><input type="radio" name="sexe" value="Femme"/>Une geekette</label><br/>
-        	
-        	
-        	<div ng-controller="MainCtrl">
-	        	Centres D'intérets :  <br/>
-	        	
-					<label ng-repeat="interet in interets" class="checkbox" for="{{interet.id}}">
-						<input type="checkbox" id="{{interet.id}}" ng-model="selected[interet.id]"/>
-						{{interet.libelle}}
-					</label>
-					<input type="button" data-ng-click="ShowSelected()" value="Chercher l'amour!"/>
-        	</div>
-        		
-        		
-        	</form>
+    	<div id="listDiv" ng-controller="MainCtrl" class="col-md-4 bg-warning">
+	        <form name="searchLove" class="text-center">
+	        	Je cherche :<br/> 
+	       		<label><input type="radio" name="sexe" ng-model="sexe" value="H" checked required/>Un geek</label><br/>
+	       		<label><input type="radio" name="sexe" ng-model="sexe" value="F" required/>Une geekette</label><br/>
+	       		<label><input type="radio" name="sexe" ng-model="sexe" value="A" required/>Qu'importe!</label><br/>
+	        	Centres D'interets :  <br/>
+				<select style="margin-top: 10px;" ng-model="interet" ng-options="interet.libelle for interet in interets" required></select>
+				<br/>
+				 <div id="buttonSearch" ng-show="searchLove.$valid">
+	        		<a class="text-center btn btn-danger" data-ng-click="search()">Chercher l'amour!</a>	
+	        	 </div>
+	        </form>
+	    <br/>
+	      Résultats :
+		<ul>
+			<li class="row" ng-repeat="result in results">
+				<a href="#profile/{{result.id}}">{{result.prenom}} {{result.nom}}</a>
+			</li>
+		</ul>
+	        
+	       
 		</div>
-		<div id="resultDiv" class="col-md-8 bg-warning">
-        	<h1></h1>
+		<div id="resultDiv" ng-view class="col-md-8 bg-warning">
 		</div>
 	</div>
         <script src="/js/angular.js"></script>
