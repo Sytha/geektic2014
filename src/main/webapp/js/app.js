@@ -25,7 +25,7 @@ app.config(function($routeProvider){
 	      controller: 'MainCtrl'
 	    })
 		.when('/profile/:id', {
-	      templateUrl: '/profile.html?:id',
+	      templateUrl: '/profile.html',
 	      controller: 'ProfileCtrl'
 	    })
 	    .otherwise('/');
@@ -34,5 +34,8 @@ app.config(function($routeProvider){
 app.controller('ProfileCtrl', function($scope, $http, $routeParams) {
     $http.get('/api/geek/'+$routeParams.id).success(function(geek) {
         $scope.geekProfile = geek;
+    });
+    $http.get('/api/history/'+$routeParams.id).success(function(history) {
+        $scope.visite = history;
     });
 });

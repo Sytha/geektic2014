@@ -1,10 +1,14 @@
 package com.ninja_squad.geektic.dao;
 
+import java.util.Date;
 import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+
 import org.springframework.stereotype.Repository;
+
 import com.ninja_squad.geektic.*;
 
 @Repository
@@ -21,6 +25,14 @@ public class HistoryDao {
 		TypedQuery<History> query = em.createQuery(jpql, History.class); 
 		query.setParameter("id", id);
 		return query.getResultList();
+	}
+	
+	public void addHistoryById(Geek geek){
+		History history = new History();
+		Date date = new Date();
+		history.setDate(date);
+		history.setGeek(geek);
+		this.persist(history);
 	}
 	
 	public int findCountGeekHistoryById(Long id){

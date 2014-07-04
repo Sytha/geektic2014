@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ninja_squad.geektic.dao.GeekDao;
+import com.ninja_squad.geektic.dao.HistoryDao;
 import com.ninja_squad.geektic.dao.InteretDao;
 import com.ninja_squad.geektic.Geek;
 import com.ninja_squad.geektic.Interet;
@@ -33,6 +34,9 @@ public class GeekticService {
 	@Autowired
 	private GeekDao daoGeek;
 	
+	@Autowired
+	private HistoryDao daoHistory;
+	
 	@RequestMapping(value="/interetsList")
     public List<Interet> getListInterets() {
         return daoInteret.findAll();
@@ -49,6 +53,13 @@ public class GeekticService {
 	
 	@RequestMapping(value="/geek/{id}")
     public Geek getGeekProfile(@PathVariable Long id){
-		return daoGeek.findById(id);
+		Geek geek = daoGeek.findById(id);
+		daoHistory.addHistoryById(geek);
+		return geek;
+    }
+	
+	@RequestMapping(value="/history/{id}")
+    public int getGeekCountHistory(@PathVariable Long id){
+		return daoHistory.findCountGeekHistoryById(id);
     }
 }

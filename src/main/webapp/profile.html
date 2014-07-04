@@ -1,3 +1,21 @@
-<div ng-controller="ProfileCtrl">
-	{{geekProfile.nom}}
+<div id="geekProfile">
+	<h3>Profile : </h3>
+	<ul>
+		<li>Nom : {{geekProfile.prenom}}</li>
+		<li>Prenom : {{geekProfile.nom}}</li>
+		<li>Age : {{geekProfile.age}}</li>
+		<li>Ville : {{geekProfile.ville}}</li>
+		<li>Mail : {{geekProfile.mail}}</li>
+	</ul>
+	<h3>Interets : </h3>
+	<ul>
+		<li class="row" ng-repeat="interet in geekProfile.interets">
+				{{interet.libelle}}
+		</li>
+	</ul>
+	<h3>Gravatar : </h3>
+	<img width="100px" src="{{geekProfile.gravatar}}"/>
+	
+	<br/>
+	Visite sur le profile : {{visite}} visites
 </div>
