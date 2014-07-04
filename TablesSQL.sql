@@ -23,14 +23,15 @@ primary KEY (id),
 CREATE TABLE HISTORY (
 id integer NOT NULL,
 date timestamp NOT NULL,
+ip VARCHAR(255) NOT NULL,
 geek integer NOT NULL,
 primary KEY (id),
 FOREIGN KEY (geek) REFERENCES GEEKS(id)
 );
 
 CREATE TABLE GEEKS_INTERETS (
-interet_id integer NOT NULL,
 geek_id integer NOT NULL,
+interet_id integer NOT NULL,
 primary KEY (interet_id,geek_id),
 FOREIGN KEY (geek_id) REFERENCES GEEKS(id),
 FOREIGN KEY (interet_id) REFERENCES INTERETS(id)

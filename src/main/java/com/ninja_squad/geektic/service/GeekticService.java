@@ -15,6 +15,7 @@ import com.ninja_squad.geektic.dao.InteretDao;
 import com.ninja_squad.geektic.Geek;
 import com.ninja_squad.geektic.Interet;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
@@ -52,9 +53,10 @@ public class GeekticService {
     }
 	
 	@RequestMapping(value="/geek/{id}")
-    public Geek getGeekProfile(@PathVariable Long id){
+    public Geek getGeekProfile(@PathVariable Long id,HttpServletRequest request){
+		String ip = request.getRemoteAddr();
 		Geek geek = daoGeek.findById(id);
-		daoHistory.addHistoryById(geek);
+		daoHistory.addHistoryById(geek,ip);
 		return geek;
     }
 	

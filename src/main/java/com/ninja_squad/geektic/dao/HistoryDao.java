@@ -27,11 +27,12 @@ public class HistoryDao {
 		return query.getResultList();
 	}
 	
-	public void addHistoryById(Geek geek){
+	public void addHistoryById(Geek geek,String ip){
 		History history = new History();
 		Date date = new Date();
 		history.setDate(date);
 		history.setGeek(geek);
+		history.setIp(ip);
 		this.persist(history);
 	}
 	
