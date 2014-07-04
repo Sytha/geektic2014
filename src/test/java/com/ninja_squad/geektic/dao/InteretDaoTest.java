@@ -24,7 +24,7 @@ public class InteretDaoTest extends BaseDaoTest {
 
     @Before
     public void populateDatabase() {
-    	Operation operation = Operations.sequenceOf(Operations.deleteAllFrom("history", "geeks","interets"),
+    	Operation operation = Operations.sequenceOf(Operations.deleteAllFrom("geeks_interets","history", "geeks","interets"),
 				Operations.insertInto("interets")
 				.columns("id", "libelle")
 				.values (1,"J2EE")

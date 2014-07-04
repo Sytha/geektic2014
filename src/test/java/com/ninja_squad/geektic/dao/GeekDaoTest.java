@@ -24,7 +24,7 @@ public class GeekDaoTest extends BaseDaoTest {
 
     @Before
     public void populateDatabase() {
-    	Operation operation = Operations.sequenceOf(Operations.deleteAllFrom("history", "geeks","interets"),
+    	Operation operation = Operations.sequenceOf(Operations.deleteAllFrom("geeks_interets","history", "geeks","interets"),
 				Operations.insertInto("interets")
 				.columns("id", "libelle")
 				.values (1,"J2EE")
@@ -114,6 +114,10 @@ public class GeekDaoTest extends BaseDaoTest {
 		//On test si un geek a un gravatar
 		resultString = list.get(0).getGravatar();
 		assertEquals("http://humourger.com/femmesmoches/Femme_a_barbe_moche.jpg",resultString);
+		//On test si un geek a une liste d'interets
+		resultLong = list.get(0).getInterets().size();
+		assertEquals(4,resultLong);
+		
     }
     
     @Test
@@ -146,8 +150,14 @@ public class GeekDaoTest extends BaseDaoTest {
     }
     
     @Test
-    public void testFindByCriteria(){
-    	List<Geek> list = dao.findByCriteria("H", "JAVA");
-    	assertEquals(2,list.size());
+    public void testFindBySexeInteret(){
+    	List<Geek> list = dao.findBySexeInteret("H", "J2EE");
+    	assertEquals(3,list.size());
+    }
+    
+    @Test
+    public void testFindByInteret(){
+    	List<Geek> list = dao.findByInteret("J2EE");
+    	assertEquals(4,list.size());
     }
 }

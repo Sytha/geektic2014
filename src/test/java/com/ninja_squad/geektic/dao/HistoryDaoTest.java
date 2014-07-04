@@ -33,7 +33,7 @@ public class HistoryDaoTest extends BaseDaoTest {
 
     @Before
     public void populateDatabase() {
-    	Operation operation = Operations.sequenceOf(Operations.deleteAllFrom("history", "geeks","interets"),
+    	Operation operation = Operations.sequenceOf(Operations.deleteAllFrom("geeks_interets","history", "geeks","interets"),
 				Operations.insertInto("interets")
 				.columns("id", "libelle")
 				.values (1,"J2EE")
@@ -120,6 +120,8 @@ public class HistoryDaoTest extends BaseDaoTest {
     	assertEquals(5,dao.findCountGeekHistoryById(1L));
     }
 
+    
+    
     @Test
     @Transactional
     public void testPersistHistory(){
